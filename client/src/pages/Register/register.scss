@@ -1,0 +1,83 @@
+@use "../../App.scss" as app;
+
+.register-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top,
+        #3c486b,
+        #8b5a8b,
+        #db6a84,
+        #ff9661,
+        #f9d949
+    );
+
+    >form {
+        width: 50%;
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: .5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        > h1 {
+            font-family: app.$font-ubuntu;
+            margin-bottom: 1rem; 
+            text-align: center;
+        }
+        .input-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+            
+            .input-photo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                .input-photo-field{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                label{
+                    width: 100%;
+                    display: block;
+                    background-color: app.$polic-blue;
+                    color: white;
+                    font-family: app.$font-ubuntu;
+                    padding: 1rem;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    cursor: pointer;
+                }
+            }
+            >input{
+                width: 100%;
+                padding: .5rem;
+                font-size: 1rem;
+                font-family: app.$font-assistant;
+                outline: none;
+                border: 1px solid rgba(0,0,0,.308);
+                border-radius: .2rem;
+                margin: 0;
+            }
+            > button {
+                width: 100%;
+                padding: 1rem 2rem;
+                margin: 0;
+                cursor: pointer;
+                &:hover {
+                  background-color: app.$polic-blue;
+                  color: white;
+                }
+            }
+        }
+    }
+}

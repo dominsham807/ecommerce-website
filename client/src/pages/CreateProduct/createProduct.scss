@@ -1,0 +1,100 @@
+@use "../../App.scss" as app;
+
+.create-container{
+    height: 100vh !important ;
+    background: app.$gargo-gas;
+    .row{
+        display: flex;
+        padding: 2rem;
+        gap: 3rem;
+
+        .row-product{
+            // width: 70%;
+            font-family: app.$font-ubuntu;
+
+            .card-product{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+
+                .category{
+                    
+                    .select{
+                        width: 100%;
+                        border: 1px solid rgb(124,124,124);
+                        margin-top: 1rem;
+                        border-radius: .5rem;
+                        cursor: pointer;
+                    }
+                    .photo{
+                        margin: 2rem 0;
+                        
+                        label{
+                            display: block;
+                            background-color: app.$polic-blue;
+                            color: white;
+                            text-align: center;
+                            padding: 1rem;
+                            width: 100%;
+                            border-radius: .5rem;
+                            cursor: pointer;
+                        }
+                    }
+                    .product-input{
+                        display: flex;
+                        align-items: center;
+                        gap: 2rem;
+                     
+                        margin-bottom: 1rem;
+                        label{
+                            width: 30%;
+                            text-align: start;
+                        }
+                        input{
+                            width: 70%;
+                            height: 38px;
+                            padding: 0 10px;
+                            // margin-bottom: 1rem;
+                            border-radius: .5rem;
+                            border: 1px solid rgb(124, 124, 124);
+                            
+                        }
+                        textarea{
+                            width: 70%;
+                            border-radius: .5rem;
+                            border: 1px solid rgb(124, 124, 124);
+                            padding: 10px;
+                        }
+                        .shipping-select{
+                            width: 100%;
+                            margin-top: 1rem;
+                            border-radius: .5rem;
+                            cursor: pointer;
+                        }
+                        button{
+                            width: 100%;
+                            height: 38px;
+                            padding: 0 11px;
+                            margin: 1rem 0;
+                            border-radius: .5rem;
+                            border: 1px solid rgb(124, 124, 124);
+                            cursor: pointer;
+                            background-color: app.$polic-blue;
+                            color: white;
+
+                            &:hover{
+                                background-color: app.$gargo-gas;
+                                border: 1px solid black;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}

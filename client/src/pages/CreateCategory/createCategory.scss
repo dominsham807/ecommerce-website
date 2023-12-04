@@ -1,0 +1,85 @@
+@use "../../App.scss" as app;
+
+.container{
+    background-color: app.$gargo-gas;
+    min-height: 100vh;
+    padding: 5rem;
+    .row{
+        display: flex;
+        // align-items: center;
+      
+        flex-direction: row;
+        gap: 3rem;
+
+        .row-right{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            .card{
+                width: 100%;
+            }
+            // h1{
+            //     text-align: center;
+            // }
+            form{
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content: center;
+                width: 50%;
+
+                .category-name-input{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    font-size: 1.5rem;
+
+                    input {
+                        width: 100%;
+                        height: 2rem;
+                        padding: .7rem;
+                        margin: 1rem 0 1rem 1rem;
+                        border: 1px solid rgb(100, 99, 99);
+                        border-radius: .2rem;
+                        font-family: app.$font-assistant;
+                        font-size: 1rem;
+                    }
+                }
+                .category-photo-input{
+                    margin: .5rem 0;
+
+                    label{
+                        display: block;
+                        background-color: app.$polic-blue;
+                        color: white;
+                        text-align: center;
+                        padding: 1rem;
+                        width: 100%;
+                        border-radius: .5rem;
+                        cursor: pointer;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+                img{
+                    height: 300px;
+                    width: 100%;
+                }
+                button{
+                    height: 3rem;
+                    width: 100%;
+                    border-radius: .5rem;
+                    font-family: app.$font-assistant;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    background-color: app.$polic-blue;
+                    color: white;
+                    cursor: pointer;
+                    border: 3px solid app.$gargo-gas;
+                }
+            }
+        }
+    }
+}

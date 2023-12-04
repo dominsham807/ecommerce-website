@@ -1,0 +1,79 @@
+@use "../../App.scss" as app;
+
+.container{
+    padding: 5rem;
+    // height: 100%;
+    // width: 50%;
+    .category-info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 2rem;
+        > h3{
+            font-family: app.$font-ubuntu;
+            font-size: 2rem;
+        }
+        > h6 {
+            font-family: app.$font-assistant;
+            font-size: 1.5rem;
+        }
+    }
+
+    .product-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .product-card{
+            width: 300px;
+            height: 400px;
+            // padding: 2rem 0;
+            border: 1px solid black;
+            >img{
+                width: 300px;
+                height: 300px;
+            }
+            .product-info{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 .5rem;
+                font-size: 1.5rem;
+            }
+
+            .btn{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+
+                button{
+                    flex: 1;
+                    padding: .5rem 1rem;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: app.$polic-blue;
+                    color: app.$white;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    
+                   
+
+                    &:nth-child(1) {
+                        margin-right: 0.5rem;
+                        &:hover {
+                            background-color: app.$green-dark;
+                        }
+                    }
+            
+                    &:nth-child(2) {
+                        margin-left: 0.5rem;
+                        background-color: app.$polic-blue;
+                        &:hover {
+                          background-color: app.$green-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

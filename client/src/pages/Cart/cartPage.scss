@@ -1,0 +1,141 @@
+@use "../../App.scss" as app;
+
+.cart-container{
+    height: 100%;
+    background-color: app.$gargo-gas;
+    display: flex;
+    // flex-direction: column;
+    font-family: app.$font-ubuntu;
+    align-items: start;
+    padding: 3rem;
+    .cart-detail{
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        // padding: 1rem 0;
+
+        .cart-user{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: start;
+        }
+    }
+    .cart-items{
+        width: 100%;
+        // flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+
+        .item{
+            display: flex;
+            background-color: app.$polic-blue;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 1rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            color: white;
+
+            .item-product{
+                display: flex;
+                gap: 2rem;
+
+                .item-detail{
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: space-between;
+                }
+            }
+            .item-detail{
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                // justify-content: center;
+                p{
+                    text-align: justify;
+                }
+
+                .qtyBtns {
+                    display: flex;
+                    gap: 1rem;
+
+                    .increaseQtyBtn{
+                        background-color: app.$polic-blue;
+                        height: 50px;
+                        width: 100px;
+                        &:hover{
+                            background: white;
+                            color: black;
+                        }
+                    }
+
+                    .decreaseQtyBtn{
+                        background-color: #d32b2b;
+                        height: 50px;
+                        width: 100px;
+                        &:hover{
+                            background: transparent;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            button{
+                // margin-top: 40px;
+                width: 200px;
+                height: 60px;
+                background-color: #d32b2b;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 0 1rem;
+                border-radius: .5rem;
+                
+                &:hover{
+                    background: white;
+                    color: black;
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .checkout{
+        width: 40%;
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        text-align: center;
+        // justify-content: center;
+        // align-items: center;
+        gap: 2rem;
+        font-size: 1.5rem;
+        h4{
+            padding: .5rem 0;
+        }
+        button {
+            font-family: app.$font-assistant;
+            font-size: 1rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            border: none;
+            background-color: app.$polic-blue;
+            color: white;
+            width: 400px;
+            border-radius: .5rem;
+            margin: .5rem;
+        }
+    }
+
+
+}

@@ -1,0 +1,44 @@
+@use "../../App.scss" as app;
+
+.admin-dashboard{
+    background-color: app.$gargo-gas;
+    height: 100vh;
+}
+.admin-container{
+    
+    .row{
+        padding: 1rem;
+        display: flex;
+        gap: 3rem;
+        flex-direction: row;
+
+        .row-right{
+            width: 80%;
+            font-family: app.$font-ubuntu;
+            h1{
+                padding-bottom: 2rem;
+            }
+            .card{
+                background-color: app.$polic-blue;
+                padding: 2rem;
+                border-radius: .5rem;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                h3{
+                    padding: 1rem 0;
+                }
+                .profile-btn{
+                    padding: 1rem 0;
+                    display: block;
+                    width: 20%;
+                    border-radius: .5rem;
+                    background-color: app.$gargo-gas;
+                    text-decoration: none;
+                    text-align: center;
+                    color: black;
+                }
+            }
+        }
+    }
+}

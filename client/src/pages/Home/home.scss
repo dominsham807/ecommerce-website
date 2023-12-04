@@ -1,0 +1,168 @@
+@use "../../App.scss" as app;
+
+.hero{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+
+    .hero-left{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-left: 4rem;
+
+        >h1{
+            font-family: app.$font-ubuntu;
+            font-size: 3rem;
+            color: app.$polic-blue;
+            padding-bottom: 2rem;
+        }
+
+        > p {
+            font-family: app.$font-assistant;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: justify;
+        }
+    }
+
+    .hero-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        > img {
+            width: 600px;
+            height: 600px;
+        }
+    }
+}
+
+.home{
+    display: flex;
+    padding: 4rem;
+    gap: 2rem;
+    .left{
+        width: 20%;
+        background-color: app.$polic-blue;
+        padding: 1rem;
+        color: white;
+        border-radius: .5rem;
+
+        h4{
+            font-family: app.$font-ubuntu;
+            font-size: 1rem;
+        }
+
+        .cat-filter{
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .checkbox-option, .radio-option{
+                color: white;
+                font-family: app.$font-ubuntu;
+            }
+            .reset-btn{
+                padding: .5rem 0;
+                font-family: app.$font-ubuntu;
+                font-size: 1.2rem;
+                background-color: app.$gargo-gas;
+                color: black;
+                cursor: pointer;
+                border: none;
+                border-radius: .5rem;
+
+                &:hover{
+                    background-color: transparent;
+                    border: 1px solid black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .right{
+        .info-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: app.$font-ubuntu;
+            h1{
+                font-size: 1.6rem;
+            }
+            h5{
+                font-size: 1.2rem;
+            }
+        }
+        
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            padding: 1rem;
+
+            .product-card{
+                background-color: app.$white;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                font-family: app.$font-ubuntu;
+
+                img{
+                    width: 100%;
+                    height: 200px;
+                    object-fit: contain;
+                }
+
+                .card-body{
+                    display: flex;
+                    gap: 2rem;
+                    align-items:end;
+                    justify-content: space-between;
+                    padding: 2rem;
+                }
+
+                .card-btn{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+
+                    button{
+                        flex: 1;
+                        padding: .5rem 1rem;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: app.$gargo-gas;
+                        color: app.$white;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        
+                        &:hover {
+                            background-color: app.$polic-blue;
+                        }
+                
+                        &:nth-child(1) {
+                            margin-right: 0.5rem;
+                        }
+                
+                        &:nth-child(2) {
+                            margin-left: 0.5rem;
+                            background-color: app.$polic-blue;
+                            &:hover {
+                              background-color: app.$green-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
